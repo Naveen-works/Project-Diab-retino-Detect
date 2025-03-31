@@ -6,6 +6,7 @@ __pycache__/
 venv/
 emotion_venv/
 env/
+.env
 
 # Ignore model files (optional, if too large)
 *.h5
