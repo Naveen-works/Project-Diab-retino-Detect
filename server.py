@@ -16,7 +16,7 @@ model_path = r'retinopathy_model.h5'
 model = load_model(model_path,compile=False)
 
 
-class_mapping = {0: "Mild", 1: "Moderate", 2: "No_DR", 3: "Proliferate_DR", 4: "Severe"}
+class_mapping = {0: "No_DR", 1: "Mild", 2: "Moderate", 3: "Severe", 4: "Proliferate_DR"}
 
 def preprocess_image(image):
     """Preprocess the input image for model prediction."""

@@ -1,6 +1,10 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const apiKey = "AIzaSyBt2X1k_Wdgh3bV7FYLl8bK-2bYPIVO8Ao";
+const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+if (!apiKey) {
+  throw new Error("Missing Gemini API Key. Ensure it is set in .env file.");
+}
+
 const genAI = new GoogleGenerativeAI(apiKey);
 
 const model = genAI.getGenerativeModel({
@@ -45,8 +49,7 @@ export async function getGeminiResponse(severityLevel, confidence) {
     2. Suggest lifestyle modifications (e.g., diet, exercise).
     3. Indicate if urgent medical intervention is needed.
     
-    Ensure the response is structured exactly as above without any extra explanations or comments.`
-    ;
+    Ensure the response is structured exactly as above without any extra explanations or comments.`;
 
     const chatSession = model.startChat({
       generationConfig,
@@ -61,5 +64,3 @@ export async function getGeminiResponse(severityLevel, confidence) {
     return "An error occurred while processing the request.";
   }
 }
-
-
