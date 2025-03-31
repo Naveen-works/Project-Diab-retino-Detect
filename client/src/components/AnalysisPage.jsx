@@ -7,22 +7,22 @@ import { getGeminiResponse } from '../gemini';
 const modelPerformance = {
   classificationReport: {
     classes: [
-      { name: "No DR", precision: 0.95, recall: 0.94, f1Score: 0.94, support: 1243 },
-      { name: "Mild", precision: 0.89, recall: 0.87, f1Score: 0.88, support: 321 },
-      { name: "Moderate", precision: 0.92, recall: 0.90, f1Score: 0.91, support: 345 },
-      { name: "Severe", precision: 0.94, recall: 0.93, f1Score: 0.93, support: 356 },
-      { name: "Proliferative DR", precision: 0.96, recall: 0.95, f1Score: 0.95, support: 421 }
+      { name: "No DR", precision: 0.86, recall: 0.97, f1Score: 0.91, support: 221.0 },
+      { name: "Mild", precision: 0.50, recall: 0.61, f1Score: 0.55, support: 87.0 },
+      { name: "Moderate", precision: 0.65, recall: 0.43, f1Score: 0.52, support: 197.0 },
+      { name: "Severe", precision: 0.31, recall: 0.37, f1Score: 0.34, support: 38.0 },
+      { name: "Proliferative DR", precision: 0.33, recall: 0.39, f1Score: 0.36, support: 69.0 }
     ],
-    accuracy: 0.924,
-    macroAvg: { precision: 0.932, recall: 0.918, f1Score: 0.922 },
-    weightedAvg: { precision: 0.933, recall: 0.924, f1Score: 0.927 }
+    accuracy: 0.79,
+    macroAvg: { precision: 0.53, recall: 0.55, f1Score: 0.53 },
+    weightedAvg: { precision: 0.65, recall: 0.64, f1Score: 0.63 }
   },
   confusionMatrix: [
-    [1168, 45, 18, 8, 4],
-    [32, 279, 7, 2, 1],
-    [15, 8, 311, 9, 2],
-    [6, 3, 12, 331, 4],
-    [3, 1, 2, 15, 400]
+    [212, 4, 1, 1, 1],
+    [8, 53, 13, 1, 12],
+    [21, 37, 84, 18, 37],
+    [0, 4, 14,14, 6],
+    [5, 9, 17, 11, 27]
   ],
   insights: {
     strengths: [
