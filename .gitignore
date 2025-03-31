@@ -1,0 +1,21 @@
+# Ignore Python cache and virtual environments
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+emotion_venv/
+env/
+
+# Ignore model files (optional, if too large)
+*.h5
+*.pth
+
+# Ignore Node.js dependencies and build files
+client/node_modules/
+client/.vite/
+client/dist/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
